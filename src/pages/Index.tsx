@@ -1,5 +1,5 @@
 import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { MedicalButton } from "@/components/ui/medical-button";
 import { Calendar, Clock, Shield, Star, ChevronRight } from "lucide-react";
 import saludUisLogo from "@/assets/salud-uis-logo.png";
@@ -60,10 +60,10 @@ const Index = () => {
           </div>
           
           <MedicalButton variant="medical" asChild>
-            <a href="/auth">
+            <Link to="/auth">
               Acceder
               <ChevronRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </MedicalButton>
         </div>
       </header>
@@ -86,10 +86,10 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <MedicalButton variant="medical" size="lg" asChild>
-              <a href="/auth">
+              <Link to="/auth">
                 Agendar Mi Primera Cita
                 <Calendar className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </MedicalButton>
             <MedicalButton variant="outline" size="lg">
               Conocer Más
@@ -145,10 +145,10 @@ const Index = () => {
           </p>
           
           <MedicalButton variant="medical" size="lg" asChild>
-            <a href="/auth">
+            <Link to="/auth">
               Crear Cuenta Gratis
               <ChevronRight className="ml-2 h-5 w-5" />
-            </a>
+            </Link>
           </MedicalButton>
         </div>
       </section>
