@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MedicalButton } from "@/components/ui/medical-button";
 import { AppointmentForm } from "@/components/AppointmentForm";
 import { AppointmentsList } from "@/components/AppointmentsList";
+import { AppointmentStats } from "@/components/AppointmentStats";
 import { ProfileForm } from "@/components/ProfileForm";
 import { NotificationsList } from "@/components/NotificationsList";
 import { Calendar, Clock, User, History, Bell, Star, ArrowLeft } from "lucide-react";
@@ -136,14 +137,19 @@ const Dashboard = () => {
 
         {currentView === 'dashboard' ? (
           <>
-            {/* Welcome Section */}
+             {/* Welcome Section */}
+             <div className="mb-8">
+               <h2 className="text-3xl font-bold text-primary mb-2">
+                 ¡Bienvenido a tu Portal Médico!
+               </h2>
+               <p className="text-muted-foreground">
+                 Gestiona tus citas médicas de forma fácil y segura
+               </p>
+             </div>
+
+            {/* Statistics Overview */}
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-primary mb-2">
-                ¡Bienvenido a tu Portal Médico!
-              </h2>
-              <p className="text-muted-foreground">
-                Gestiona tus citas médicas de forma fácil y segura
-              </p>
+              <AppointmentStats />
             </div>
 
         {/* Quick Actions */}
